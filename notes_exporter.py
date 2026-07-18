@@ -58,7 +58,7 @@ def export_to_bear_combined(videos: List[dict], tags: str = "instagram,video-sum
     ]
     body = f"# {title}\n\n" + "\n\n---\n\n".join(sections)
 
-    print(f"\nCreating combined Bear note: "{title}"")
+    print(f'\nCreating combined Bear note: "{title}"')
     _bear_create(title, body, tags)
     print("Done — check Bear.")
 
@@ -71,7 +71,7 @@ def export_to_bear_individual(videos: List[dict], tags: str = "instagram,video-s
         title = f"@{uploader} — {video_id}"
         body = _format_bear_video_block(video, 1, 1)
 
-        print(f"  Creating Bear note: "{title}"")
+        print(f'  Creating Bear note: "{title}"')
         _bear_create(title, body, tags)
 
     print(f"\nCreated {len(videos)} Bear note(s).")
@@ -126,7 +126,7 @@ def export_to_apple_notes_combined(videos: List[dict]) -> None:
     ]
     body = "\n\n---\n\n".join(sections)
 
-    print(f"\nCreating Apple Note: "{title}"")
+    print(f'\nCreating Apple Note: "{title}"')
     _apple_notes_create(title, body)
     print("Done — check Apple Notes.")
 
@@ -139,7 +139,7 @@ def export_to_apple_notes_individual(videos: List[dict]) -> None:
         title = f"@{uploader} — {video_id}"
         body = _format_apple_notes_video_block(video, 1, 1)
 
-        print(f"  Creating Apple Note: "{title}"")
+        print(f'  Creating Apple Note: "{title}"')
         _apple_notes_create(title, body)
 
     print(f"\nCreated {len(videos)} Apple Note(s).")

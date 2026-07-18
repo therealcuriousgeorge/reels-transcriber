@@ -29,10 +29,8 @@ class Transcriber:
         cache_file = video_path.with_suffix(".transcript")
 
         if cache_file.exists():
-            cached = cache_file.read_text(encoding="utf-8").strip()
-            if cached:
-                print(f"  [cache] Using existing transcript for {video_path.name}")
-                return cached
+            print(f"  [cache] Using existing transcript for {video_path.name}")
+            return cache_file.read_text(encoding="utf-8").strip()
 
         print(f"  Transcribing {video_path.name} ...")
         try:
