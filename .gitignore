@@ -1,0 +1,25 @@
+# Downloaded videos and sidecar cache files
+ig-summarizer-downloads/
+*.mp4
+*.webm
+*.mkv
+*.mov
+*.transcript
+*.summary
+*.description
+*.info.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+
+# macOS
+.DS_Store
+
+# Environment
+.env
